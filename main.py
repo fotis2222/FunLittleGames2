@@ -24,6 +24,10 @@ if game == "1":
         if guess == secretNumber:
             print("you win!")
             enter()
+        elif guess < secretNumber:
+            print("guess higher")
+        else:
+            print("guess lower")
         numOfGuesses += 1
     else:
         print("you lose")
