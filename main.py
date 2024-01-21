@@ -11,7 +11,8 @@ def explain():
 
 print("""
 select a game:
-(1) guess the number (hints)""")
+(1) guess the number (hints)
+(2) guess the number (no hints)""")
 game: str = input()
 if game == "1":
     secretNumber = randint(1, 10)
@@ -28,6 +29,21 @@ if game == "1":
             print("guess higher")
         else:
             print("guess lower")
+        numOfGuesses += 1
+    else:
+        print("you lose")
+        enter()
+elif game == "2":
+    secretNumber = randint(1, 10)
+    guess: int
+    numOfGuesses = 0
+    print("try to guess the secret number in 5 guesses!")
+    while numOfGuesses < 5:
+        print("Guess: ")
+        guess = int(input())
+        if guess == secretNumber:
+            print("you win!")
+            enter()
         numOfGuesses += 1
     else:
         print("you lose")
