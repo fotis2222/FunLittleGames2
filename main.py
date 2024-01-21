@@ -13,7 +13,7 @@ print("""
 select a game:
 (1) guess the number (hints)
 (2) guess the number (no hints)
-(3) [WIP] dice roller""")
+(3) dice roller""")
 game: str = input()
 if game == "1":
     secretNumber = randint(1, 10)
